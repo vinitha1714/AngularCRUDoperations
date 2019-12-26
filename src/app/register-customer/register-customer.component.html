@@ -1,0 +1,16 @@
+<div class="form-group">
+    <form [formGroup]="addCust" (ngSubmit)="addCustomer(addCust.value)">
+        <header>Register Customer</header>
+        <label>Firstname<span>*</span></label>
+        <input type="text" class="form-control" name="fname" formControlName="fname" placeholder="Enter Firstname"/>
+        <label>Lastname<span>*</span></label>
+        <input type="text" class="form-control" name="lname" formControlName="lname" placeholder="Enter Lastname"/>
+        <label>Email<span>*</span></label>
+        <input type="text" class="form-control" name="email" formControlName="email" placeholder="Enter Email"/>
+        <label>Phone<span>*</span></label>
+        <input type="number" class="form-control" name="phone" formControlName="phone" placeholder="Enter Phone Number"/>
+        <label>Password<span>*</span></label>
+        <input type="password" class="form-control" name="pwd" formControlName="pwd" placeholder="Enter Password"/>
+        <button type="submit" [disabled]="!addCust.valid" class="btn btn-success">Register</button>
+    </form>
+</div>

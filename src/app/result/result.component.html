@@ -1,0 +1,29 @@
+<div class="user">
+    <h2> User Details</h2>
+    <div>
+    <button class="btn btn-success"  (click)="addUserButton()"> Add User</button>
+  </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden"></th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let customer of customers, let i = first">
+        <td class="hidden"></td>
+        <td>{{customer.firstName}}</td>
+        <td>{{customer.lastName}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.phone}}</td>
+        <td><button class="btn btn-success" (click)="deleteUserButton(customer)"> Delete</button>
+          <button class="btn btn-success" (click)="editUserButton(customer)" style="margin-left: 20px;"> Edit</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
